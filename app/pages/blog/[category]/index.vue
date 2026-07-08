@@ -19,7 +19,7 @@ watch(
   (label) => {
     usePageMeta({
       title: `${label} | ABC Co.`,
-      description: `${label}カテゴリの記事一覧ページです。 | ABC Co.`,
+      description: `${label}カテゴリの記事一覧ページです。`,
     })
   },
   { immediate: true }

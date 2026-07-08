@@ -11,7 +11,7 @@ watch(
     if (updateData) {
       usePageMeta({
         title: `${updateData.fields.title} | ABC Co.`,
-        description: updateData.fields.title,
+        description: `${updateData.fields.description ?? '更新情報の詳細ページです。'}`,
       })
     }
   },

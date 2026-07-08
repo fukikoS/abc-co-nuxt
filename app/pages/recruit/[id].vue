@@ -11,7 +11,7 @@ watch(
     if (recruitmentData) {
       usePageMeta({
         title: `${recruitmentData.fields.jobTitle}の採用情報 | ABC Co.`,
-        description: `${recruitmentData.fields.jobDescription ? documentToHtmlString(recruitmentData.fields.jobDescription) : '求人詳細ページです。'} | ABC Co.`,
+        description: `${recruitmentData.fields.jobDescription ? documentToHtmlString(recruitmentData.fields.jobDescription) : '求人詳細ページです。'}`,
       })
     }
   },

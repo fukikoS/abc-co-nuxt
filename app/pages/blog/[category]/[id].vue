@@ -19,7 +19,7 @@ watch(
     if (postData) {
       usePageMeta({
         title: `${postData.fields.title} | ABC Co.`,
-        description: `${postData.fields.description ?? 'ブログ記事の詳細ページです。'} | ABC Co.`,
+        description: `${postData.fields.description ?? 'ブログ記事の詳細ページです。'}`,
       })
     }
   },
