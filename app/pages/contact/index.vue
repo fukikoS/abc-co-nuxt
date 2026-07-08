@@ -56,13 +56,13 @@ usePageMeta({
       </div>
 
       <div class="flex flex-col gap-1.5">
-        <label for="subject" class="text-sm font-medium text-gray-700">
+        <label for="inquiry_subject" class="text-sm font-medium text-gray-700">
           件名 <span class="text-red-500">*</span>
         </label>
         <input
-          id="subject"
+          id="inquiry_subject"
           type="text"
-          name="subject"
+          name="inquiry_subject"
           placeholder="お問い合わせの件名"
           required
           class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-accent-400 focus:border-transparent transition"
