@@ -8,7 +8,8 @@ const category = useRoute().params.category as string
 const LIMIT = 12
 
 // Contentful のタグから該当カテゴリの表示ラベルを引く（無ければIDを表示）
-const { data: categories } = useCategories()
+// タイトル設定用のwatchが正しいラベルで発火するよう、取得完了を待つ
+const { data: categories } = await useCategories()
 const categoryLabel = computed(
   () => categories.value?.find((c) => c.id === category)?.name ?? category,
 )
