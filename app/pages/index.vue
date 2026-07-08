@@ -71,6 +71,15 @@ const resolveBlogPostLink = (tag: string, slug?: string, id?: string) => {
           </div>
         </div>
       </section>
+      <section class="rounded-2xl bg-slate-900 px-6 py-12 md:py-16 text-center text-white space-y-6">
+        <h2 class="text-2xl md:text-4xl font-bold font-montserrat">Recruit</h2>
+        <p class="text-base md:text-lg leading-relaxed max-w-xl mx-auto">
+          ABC Co.では、あたらしい価値を共につくる仲間を募集しています。
+        </p>
+        <NuxtLink to="/recruit" class="btn-secondary">
+          採用情報を見る
+        </NuxtLink>
+      </section>
     </main>
   </div>
 </template>
