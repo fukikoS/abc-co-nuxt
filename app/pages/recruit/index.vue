@@ -27,8 +27,8 @@ const { data: recruitments, error } = await useAsyncData('recruitments', async (
     <h2 class="heading2 mt-8">募集職種</h2>
     <ul className="space-y-6 mt-4 mb-20">
       <li v-for="recruitment in recruitments" :key="recruitment.sys.id">
-        <NuxtLink :to="`/recruit/${recruitment.sys.id}`" class="border p-4 flex justify-between items-center card">
-          <div>
+        <NuxtLink :to="`/recruit/${recruitment.sys.id}`" class="border p-4 flex justify-between items-center gap-1 card">
+          <div class="flex-1">
             <h3 class="heading3 mb-3">{{ recruitment.fields.jobTitle }}</h3>
             <p>{{ recruitment.fields.summary }}</p>
           </div>

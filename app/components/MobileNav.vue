@@ -96,7 +96,7 @@ const closeMenu = () => {
               <li v-for="link in links" :key="link.href">
                 <NuxtLink
                   :href="link.href"
-                  class="block text-lg font-medium hover:text-teal-800 transition-colors"
+                  class="block text-lg font-semibold hover:text-teal-800 transition-colors"
                   @click="closeMenu"
                 >
                   {{ link.label }}
