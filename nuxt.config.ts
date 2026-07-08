@@ -54,4 +54,9 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/image',
   ],
+
+  routeRules: {
+    '/contact': { prerender: true },
+    '/contact/thanks': { prerender: true },
+  },
 })
