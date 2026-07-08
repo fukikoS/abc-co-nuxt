@@ -1,4 +1,4 @@
-# corporate-site-nuxt
+# ABC Co. Nuxt
 
 Nuxt 4 + Contentful で構築されたコーポレートサイトです。
 
