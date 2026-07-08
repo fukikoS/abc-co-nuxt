@@ -1,0 +1,2 @@
+const SITE_NAME = 'ABC Co.'
+const URL = 'https://abc-co.com'
