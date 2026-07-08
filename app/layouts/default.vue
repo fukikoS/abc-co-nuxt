@@ -1,7 +1,7 @@
 <script setup lang="ts">
 usePageMeta({
   title: 'ABC Co.',
-  description: 'ABC Co.のコーポレートサイトです。',
+  description: 'あたらしい一歩を、あなたといっしょに。ABC Co.は、ニュースサイトの運営を軸に、コンテンツ制作や広告事業を通じてあたらしい情報との出会いをつくり続けています。',
 })
 </script>
 
