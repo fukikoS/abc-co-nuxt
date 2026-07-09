@@ -20,6 +20,11 @@ const { data, error } = await useUpdates({ page: currentPage, limit: LIMIT })
 const totalPages = computed(() =>
   Math.max(1, Math.ceil((data.value?.total ?? 0) / LIMIT)),
 )
+
+// 存在しないページ番号が指定された場合は404を返す
+if (currentPage.value > totalPages.value) {
+  throw createError({ statusCode: 404, statusMessage: '指定されたページが見つかりませんでした。' })
+}
 </script>
 
 <template>
