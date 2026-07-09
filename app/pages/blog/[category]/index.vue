@@ -5,7 +5,7 @@ const { $contentful } = useNuxtApp()
 
 // [category] のパラメータ名は category（= Contentful のタグID）
 const category = useRoute().params.category as string
-const LIMIT = 12
+const LIMIT = 20
 
 // Contentful のタグから該当カテゴリの表示ラベルを引く（無ければIDを表示）
 // タイトル設定用のwatchが正しいラベルで発火するよう、取得完了を待つ
@@ -44,7 +44,7 @@ const fetchMore = (skip: number) =>
     })
     .then((res) => res.items)
 
-const { items: allPosts, isLoading, loadMore } = useInfiniteScroll({
+const { items: allPosts, isLoading, hasMore, loadMore } = useLoadMore({
   initialItems: initialPosts.value ?? [],
   limit: LIMIT,
   fetchMore,
@@ -64,6 +64,6 @@ const { items: allPosts, isLoading, loadMore } = useInfiniteScroll({
       :resolve-to="(post) => `/blog/${category}/${post.fields.slug ?? post.sys.id}`"
     />
 
-    <InfiniteScrollSentinel :load-more="loadMore" :is-loading="isLoading" />
+    <LoadMoreButton :load-more="loadMore" :is-loading="isLoading" :has-more="hasMore" />
   </main>
 </template>

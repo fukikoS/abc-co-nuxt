@@ -1,4 +1,4 @@
-type UseInfiniteScrollOptions<T> = {
+type UseLoadMoreOptions<T> = {
   /** SSR で取得済みの初期データ */
   initialItems: T[]
   /** 1回に取得する件数 */
@@ -8,17 +8,17 @@ type UseInfiniteScrollOptions<T> = {
 }
 
 /**
- * 無限スクロール用の状態管理 composable。
+ * 「もっと見る」ボタンでの追加読み込み用の状態管理 composable。
  * - items: 累積された全アイテム
  * - isLoading: 追加読み込み中フラグ
  * - hasMore: まだ取得できるデータがあるか
- * - loadMore: 次のページを取得する関数（InfiniteScrollSentinel に渡す）
+ * - loadMore: 次のページを取得する関数（LoadMoreButton に渡す）
  */
-export const useInfiniteScroll = <T>({
+export const useLoadMore = <T>({
   initialItems,
   limit,
   fetchMore,
-}: UseInfiniteScrollOptions<T>) => {
+}: UseLoadMoreOptions<T>) => {
   const items = ref<T[]>(initialItems) as Ref<T[]>
   const skip = ref(initialItems.length)
   const isLoading = ref(false)

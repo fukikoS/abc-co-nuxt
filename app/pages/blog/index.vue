@@ -8,7 +8,7 @@ import type { BlogPostSkeleton } from '~/types/contentful'
 const { $contentful } = useNuxtApp()
 
 
-const LIMIT = 12
+const LIMIT = 20
 
 // 記事の metadata.tags からカテゴリID（先頭のタグ）を取り出し、
 // /blog/カテゴリー/記事 のパスを生成する
@@ -28,7 +28,7 @@ const resolveBlogLink = (post: {
 // 初回は SSR で取得
 const { data: initialPosts, error } = await useBlogPosts({ limit: LIMIT })
 
-const { items: allPosts, isLoading, hasMore, loadMore } = useInfiniteScroll({
+const { items: allPosts, isLoading, hasMore, loadMore } = useLoadMore({
   initialItems: initialPosts.value ?? [],
   limit: LIMIT,
   fetchMore: async (skip) => {
@@ -56,6 +56,6 @@ const { items: allPosts, isLoading, hasMore, loadMore } = useInfiniteScroll({
       :resolve-to="resolveBlogLink"
     />
 
-    <InfiniteScrollSentinel :load-more="loadMore" :is-loading="isLoading" />
+    <LoadMoreButton :load-more="loadMore" :is-loading="isLoading" :has-more="hasMore" />
   </main>
 </template>
