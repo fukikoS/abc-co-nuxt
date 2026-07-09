@@ -18,9 +18,9 @@ Nuxt 4 + Contentful で構築されたコーポレートサイトです。
 ```
 app/
 ├── components/    # Navbar, MobileNav, Footer, TopHero, PageHeader, ServiceCards,
-│                  # ArticleList, ArticleCard, CategoryList, Pagination, InfiniteScrollSentinel
+│                  # ArticleList, ArticleCard, CategoryList, Pagination, LoadMoreButton
 ├── composables/   # useBlogPosts, useRecruitments, useUpdates, useCategories, useServices,
-│                  # usePageMeta, useInfiniteScroll
+│                  # usePageMeta, useLoadMore
 ├── layouts/       # default.vue
 ├── pages/         # ルーティング（下記参照）
 ├── plugins/       # contentful.ts（$contentful クライアント）, particles.client.ts
@@ -41,7 +41,7 @@ public/            # 静的ファイル（favicon, OGP画像など）
 - `/contact`, `/contact/thanks` — お問い合わせ
 - `/privacypolicy`, `/terms` — プライバシーポリシー・利用規約
 
-ブログ・採用・更新情報は Contentful から取得しており、無限スクロール（`useInfiniteScroll`）に対応しています。
+ブログ・採用・更新情報は Contentful から取得しています。ブログは「もっと見る」ボタンによる追加読み込み（`useLoadMore`）、更新情報は `Pagination` によるページ送りに対応しています。
 
 ## セットアップ
 
