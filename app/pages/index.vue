@@ -24,7 +24,7 @@ const resolveBlogPostLink = (tag: string, slug?: string, id?: string) => {
   <TopHero />
   <div class="flex flex-col gap-10">
     <main class="container space-y-20 md:space-y-32">
-      <section class="mt-25 space-y-8 md:space-y-12">
+      <section class="space-y-8 md:space-y-12">
         <h2 class="text-3xl md:text-5xl text-center font-bold font-montserrat">Services</h2>
         <p class="text-base md:text-xl leading-relaxed max-w-2xl mx-auto font-semibold text-slate-800 text-center">
           ABC Co.は、ニュースサイトの運営を軸に、<br class="md:hidden">コンテンツ制作や広告事業を通じて<br class="md:hidden">あたらしい情報との出会いを<br class="md:hidden">つくり続けています。
