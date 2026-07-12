@@ -1,4 +1,5 @@
 import tailwindcss from "@tailwindcss/vite";
+import { SITE_NAME, SITE_URL } from "./constants";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -8,24 +9,24 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'ABC Co.',
+      title: SITE_NAME,
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       htmlAttrs: {
         lang: 'ja',
       },
       meta: [
-        { name: 'description', content: 'ABC Co.の公式サイトです。' },
-        { name: 'title', content: 'ABC Co.の公式サイトです。' },
-        { name: 'twitter:title', content: 'ABC Co.の公式サイトです。' },
+        { name: 'description', content: `${SITE_NAME}の公式サイトです。` },
+        { name: 'title', content: `${SITE_NAME}の公式サイトです。` },
+        { name: 'twitter:title', content: `${SITE_NAME}の公式サイトです。` },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:image', content: '/ogp.png' },
-        { property: 'og:title', content: 'ABC Co.の公式サイトです。' },
+        { property: 'og:title', content: `${SITE_NAME}の公式サイトです。` },
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://abc-co.com/' },
+        { property: 'og:url', content: `${SITE_URL}/` },
         { property: 'og:image', content: '/ogp.png' },
-        { property: 'og:site_name', content: 'ABC Co.' },
-        { property: 'og:description', content: 'ABC Co.の公式サイトです。' },
+        { property: 'og:site_name', content: SITE_NAME },
+        { property: 'og:description', content: `${SITE_NAME}の公式サイトです。` },
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
